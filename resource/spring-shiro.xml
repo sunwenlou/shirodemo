@@ -21,7 +21,7 @@
 	<!-- Shiro Filter -->
 	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
 		<property name="securityManager" ref="securityManager" />
-		<property name="loginUrl" value="/wo.html" />
+		<property name="loginUrl" value="/wo" />
 		<property name="successUrl" value="/view/index.html" />
 		<property name="unauthorizedUrl" value="/error/noperms.jsp" />
 		
@@ -39,6 +39,7 @@
 				/login.html=anon,rolefilter
 				/tologin.html=anon
 				/wo.html=anon
+				/login=anon
 				/logout.html=anon
 				/**=authc,rolefilter
 			</value>
